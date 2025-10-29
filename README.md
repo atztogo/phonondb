@@ -19,6 +19,6 @@ Supercell approach with systematic displacements was employed. Forces were compu
 
 Supercell approach with systematic displacements was employed. Forces were computed with PBE. Thease data were used in A. Togo, L. Chaput, and I. Tanaka, Phys. Rev. B, **91**, 094306 (2015) and A. Seko, *et al.*, Phys. Rev. Lett., **115**, 205901 (2015).
 
-* Under preparation. Please contact atz.togo@gmail.com for the data.
+* [mdr/phono3py_103compounds_fd_PBE/README.md](mdr/phono3py_103compounds_fd_PBE/README.md)
 
-  
+
