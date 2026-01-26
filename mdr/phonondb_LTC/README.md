@@ -39,8 +39,8 @@ evaluated by the pypolymlp code, which is stored in
 `phonopy_mlp_eval_fc2_dataset.yaml.xz`. Third-order force constants (fc3) can be
 calculated using the built-in finite difference approach in the phono3py code
 with the displacement–force dataset stored in
-`phono3py_mlp_eval_fc3_disp.yaml.xz` (displacements) and `FORCES_FC3.xz
-(forces)`. As an example, lattice thermal conductivities (LTCs) were calculated
+`phono3py_mlp_eval_fc3_disp.yaml.xz` (displacements) and `FORCES_FC3.xz`
+(forces). As an example, lattice thermal conductivities (LTCs) were calculated
 using the phono3py code with fc2 and fc3, and the calculation log is provided in
 `LTC-calc.log`. The harmonic phonon band structure and density of states are
 plotted in `band_pdos.png`. The band path was generated using the SeeK-path
