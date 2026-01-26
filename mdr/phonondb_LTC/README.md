@@ -1,5 +1,55 @@
 # Phonondb lattice thermal conductivity data on MDR at NIMS
 
+The URLs for the Materials Data Repository (MDR) pages at NIMS and the
+associated data are listed in
+[README.md](https://github.com/atztogo/phonondb/tree/main/mdr/phonondb_LTC/README.md).
+Each data link contains eight downloadable files, which are compressed into a
+single zip file available at the link below.
+
+To approximately reproduce `LTC-calc.log`,
+
+```bash
+phonopy-load phonopy_mlp_eval_fc2_dataset.yaml.xz --writefc --writefc-format hdf5 -v
+phono3py-load phono3py_mlp_eval_fc3_disp.yaml.xz --fc-calc traditional --cfc -v
+rm fc2.hdf5
+ln -s force_constants.hdf5 fc2.hdf5
+phono3py-load phono3py.yaml --mesh 50 --br --isotope --boundary-mfp 1000 -v
+```
+
+## Computational details
+
+Initial geometry optimization of the conventional unit cell, standardized by the
+spglib code, was performed using the VASP code with the PBEsol
+exchange-correlation functional. Supercell forces and energies were calculated
+using the VASP code, and these data were used to develop polynomial machine
+learning potentials (MLPs) with the pypolymlp code. The generated MLPs are
+stored in `polymlp.yaml.xz`. Parameters required for the non-analytical term
+correction (Born effective charges and dielectric constants) were calculated
+using the VASP code with the primitive cell. These VASP results are provided in
+`phonopy_training_dataset.yaml.xz`, and the VASP input configurations can be
+found in `vasp-settings.tar.xz`. The primitive cell, unit cell, and supercell
+structures used for the VASP calculations are also provided in
+`phonopy_training_dataset.yaml.xz`. The internal atomic positions of the
+supercell were then optimized using the pypolymlp code under symmetry
+constraints; the relaxed structure can be found in
+`phonopy_mlp_eval_fc2_dataset.yaml.xz` (or
+`phono3py_mlp_eval_fc3_disp.yaml.xz`). Second-order force constants (fc2) can be
+calculated using the phonopy and symfc codes with the displacement–force dataset
+evaluated by the pypolymlp code, which is stored in
+`phonopy_mlp_eval_fc2_dataset.yaml.xz`. Third-order force constants (fc3) can be
+calculated using the built-in finite difference approach in the phono3py code
+with the displacement–force dataset stored in
+`phono3py_mlp_eval_fc3_disp.yaml.xz` (displacements) and `FORCES_FC3.xz
+(forces)`. As an example, lattice thermal conductivities (LTCs) were calculated
+using the phono3py code with fc2 and fc3, and the calculation log is provided in
+`LTC-calc.log`. The harmonic phonon band structure and density of states are
+plotted in `band_pdos.png`. The band path was generated using the SeeK-path
+code.
+
+Further details will be described in a forthcoming manuscript.
+
+## URL links
+
 | Materials Project ID | Name | Space group type | URL | data-link |
 | --- | --- | --- | --- | --- |
 | 149 | Si | Fd-3m (227) |  https://mdr.nims.go.jp/datasets/39c3c7f1-8580-402e-b963-192613e45efe | [39c3c7f1.zip]( https://mdr.nims.go.jp/datasets/39c3c7f1-8580-402e-b963-192613e45efe.zip) |
