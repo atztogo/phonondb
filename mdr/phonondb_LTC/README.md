@@ -18,12 +18,14 @@ phono3py-load phono3py.yaml --mesh 50 --br --isotope --boundary-mfp 1000 -v
 
 ## Computational details
 
-Initial geometry optimization of the conventional unit cell, standardized by the
-spglib code, was performed using the VASP code with the PBEsol
-exchange-correlation functional. Supercell forces and energies were calculated
-using the VASP code, and these data were used to develop polynomial machine
-learning potentials (MLPs) with the pypolymlp code. The generated MLPs are
-stored in `polymlp.yaml.xz`. Parameters required for the non-analytical term
+Initial crystal structures used to build the harmonic [phonondb](https://github.com/atztogo/phonondb/blob/main/mdr/phonondb/README.md) were obtained from the [Materials Project](https://next-gen.materialsproject.org/about/cite). For this lattice thermal conductivity data, the initial crystal structures were selected from those in the harmonic phonondb.
+
+For each crystal, geometry optimization of the conventional unit cell,
+standardized by the spglib code, was performed again using the VASP code with
+the PBEsol exchange-correlation functional. Supercell forces and energies were
+calculated using the VASP code, and these data were used to develop polynomial
+machine learning potentials (MLPs) with the pypolymlp code. The generated MLPs
+are stored in `polymlp.yaml.xz`. Parameters required for the non-analytical term
 correction (Born effective charges and dielectric constants) were calculated
 using the VASP code with the primitive cell. These VASP results are provided in
 `phonopy_training_dataset.yaml.xz`, and the VASP input configurations can be
