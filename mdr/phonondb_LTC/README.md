@@ -22,10 +22,11 @@ Initial crystal structures used to build the harmonic [phonondb](https://github.
 
 For each crystal, geometry optimization of the conventional unit cell,
 standardized by the spglib code, was performed again using the VASP code with
-the PBEsol exchange-correlation functional. Supercell forces and energies were
-calculated using the VASP code, and these data were used to develop polynomial
-machine learning potentials (MLPs) with the pypolymlp code. The generated MLPs
-are stored in `polymlp.yaml.xz`. Parameters required for the non-analytical term
+the PBEsol exchange-correlation functional. Forces and energies were calculated
+for 200 supercells with atomic displacements of 0.03 Å in random directions
+using the VASP code. These data were then used to develop polynomial machine
+learning potentials (MLPs) with the pypolymlp code. The generated MLPs are
+stored in `polymlp.yaml.xz`. Parameters required for the non-analytical term
 correction (Born effective charges and dielectric constants) were calculated
 using the VASP code with the primitive cell. These VASP results are provided in
 `phonopy_training_dataset.yaml.xz`, and the VASP input configurations can be
