@@ -1,4 +1,4 @@
-# phonondb
+# Phonondb
 Original phonondb@kyoto-u website `http://phonondb.mtl.kyoto-u.ac.jp/` was
 closed. The phonondb data have been migrated to data repository
 services, which are summarized below along with URL links to the phonondb data.
@@ -6,6 +6,10 @@ services, which are summarized below along with URL links to the phonondb data.
 ## URL links of phonondb data on MDR at NIMS
 
 * [mdr/phonondb/README.md](mdr/phonondb/README.md)
+
+# Phonondb lattice thermal conductivity data on MDR at NIMS
+
+* [mdr/phonondb_LTC/README.md](mdr/phonondb_LTC/README.md)
 
 # Phono3py input data of 103 compounds made under finite displacement method
 
