@@ -1,10 +1,10 @@
-# Phonondb (PBEsol)
+# Phonondb
 
 Original phonondb@kyoto-u website `http://phonondb.mtl.kyoto-u.ac.jp/` was
 closed. The phonondb data have been migrated to data repository
 services, which are summarized below along with URL links to the phonondb data.
 
-## URL links of phonondb data on MDR at NIMS
+## URL links of phonondb data on MDR at NIMS (PBEsol)
 
 * [mdr/phonondb/README.md](mdr/phonondb/README.md)
 
