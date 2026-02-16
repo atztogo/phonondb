@@ -9,6 +9,8 @@ services, which are summarized below along with URL links to the phonondb data.
 
 # Phonondb lattice thermal conductivity data on MDR at NIMS
 
+## URL links of phonondb LTC data on MDR at NIMS
+
 * [mdr/phonondb_LTC/README.md](mdr/phonondb_LTC/README.md)
 
 # Phono3py input data of 103 compounds made under finite displacement method
