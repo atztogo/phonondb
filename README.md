@@ -1,4 +1,5 @@
-# Phonondb
+# Phonondb (PBEsol)
+
 Original phonondb@kyoto-u website `http://phonondb.mtl.kyoto-u.ac.jp/` was
 closed. The phonondb data have been migrated to data repository
 services, which are summarized below along with URL links to the phonondb data.
@@ -7,9 +8,9 @@ services, which are summarized below along with URL links to the phonondb data.
 
 * [mdr/phonondb/README.md](mdr/phonondb/README.md)
 
-# Phonondb lattice thermal conductivity data on MDR at NIMS
+# Phonondb lattice thermal conductivity
 
-## URL links of phonondb LTC data on MDR at NIMS
+## URL links of phonondb LTC data on MDR at NIMS (PBEsol)
 
 * [mdr/phonondb_LTC/README.md](mdr/phonondb_LTC/README.md)
 
