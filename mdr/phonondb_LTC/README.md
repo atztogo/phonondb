@@ -9,11 +9,11 @@ single zip file available at the link below.
 To approximately reproduce `LTC-calc.log`,
 
 ```bash
-phonopy-load phonopy_mlp_eval_fc2_dataset.yaml.xz --writefc --writefc-format hdf5 -v
-phono3py-load phono3py_mlp_eval_fc3_disp.yaml.xz --fc-calc traditional --cfc -v  # FORCES_FC3.xz should exist in current dir.
+phonopy phonopy_mlp_eval_fc2_dataset.yaml.xz --writefc --writefc-format hdf5 -v
+phono3py phono3py_mlp_eval_fc3_disp.yaml.xz -v  # FORCES_FC3.xz should exist in current dir.
 rm fc2.hdf5
 ln -s force_constants.hdf5 fc2.hdf5
-phono3py-load phono3py.yaml --mesh 50 --br --isotope --boundary-mfp 1000 -v
+phono3py phono3py.yaml --mesh 50 --br --isotope --boundary-mfp 1000 -v
 ```
 
 ## Computational details
